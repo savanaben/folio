@@ -1,0 +1,586 @@
+/* ==========================================================================
+Variables
+========================================================================== */
+:root {
+  /* Colors */
+  --black-12: #1f1f1f;
+  --black-40: #666;
+  --black-58: #949494;
+  --black-92: #ededed;
+  --black-96: #f6f6f6;
+  --white: #fff;
+  --green: #077100;
+  --cyan: #00a09c;
+  --turquoise: #007c73;
+  --color-focus: var(--black-58);
+  --color-h2: var(--turquoise);
+  --color-link: var(--green);
+  --color-link--hover: var(--cyan);
+  --color-link--nav: var(--black-40);
+  --color-link--nav--hover: var(--black-58);
+  --color-low-emphasis: var(--black-40);
+  --color-text: var(--black-12);
+  --color-nav-bg: var(--black-92);
+  --color-page-bg: var(--black-96);
+  --color-header: var(--white);
+  /* Dimensions */
+  --height-header: 3.25rem;
+  --height-line: 1.625rem;
+}
+
+
+/* ==========================================================================
+Fonts
+========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?71eh5z');
+  src:  url('../fonts/icomoon.eot?71eh5z#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff2?71eh5z') format('woff2'),
+    url('../fonts/icomoon.ttf?71eh5z') format('truetype'),
+    url('../fonts/icomoon.woff?71eh5z') format('woff'),
+    url('../fonts/icomoon.svg?71eh5z#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="Icon--"],
+[class*=" Icon--"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Icon--phone:before {
+  content: "\e0cd";
+}
+.Icon--close:before {
+  content: "\e5cd";
+}
+.Icon--mail:before {
+  content: "\e159";
+}
+.Icon--arrow:before {
+  content: "\e317";
+}
+
+
+/* ==========================================================================
+Utility Classes
+========================================================================== */
+.u-padding-left {
+  padding-left: 0.5rem;
+}
+
+.u-padding-right {
+  padding-right: 0.5rem;
+}
+
+.u-reflect-x {
+  transform: scaleX(-1);
+}
+
+.u-no-margin {
+  margin: 0;
+}
+
+.u-whitespace-pre {
+  white-space: pre-wrap;
+}
+
+
+/* ==========================================================================
+Layout
+========================================================================== */
+html {
+  background: var(--color-page-bg);
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: var(--height-line); }
+html.is-no-overflow {
+  overflow: hidden; }
+
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+header {
+  align-items: center;
+  background: var(--color-header);
+  display: flex;
+  height: var(--height-header);
+  justify-content: space-between;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+main {
+  margin: 0 auto 1rem auto;
+  max-width: 68rem;
+  width: 100%;
+}
+
+section {
+  padding-top: calc(3.25rem + var(--height-header));
+}
+
+.Section--2col {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.Section--2col :nth-child(even) {
+  justify-self: center;
+}
+
+
+/* ==========================================================================
+Typography
+========================================================================== */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+h2 {
+  color: var(--color-h2);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  margin-bottom: 0.125rem;
+  width: 100%; }
+
+h3 {
+  display: inline-block;
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+}
+
+p {
+  font-size: 1.125rem;
+  margin: 0 0 var(--height-line);
+  padding: 0 1rem;
+}
+
+ul {
+  font-size: 1.125rem;
+  margin: 0 0 var(--height-line);
+  padding: 0 0 0 3.75rem;
+}
+
+li {
+  padding: 0 0 0 0.5rem;
+}
+
+small {
+  align-items: center;
+  color: var(--color-low-emphasis);
+  display: flex;
+  margin: 0 0 var(--height-line);
+  padding: 0 1rem;
+}
+
+
+/* ==========================================================================
+Buttons & Links
+========================================================================== */
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+}
+
+a {
+  color: var(--color-link);
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s, text-decoration 0.2s; }
+a:hover {
+  color: var(--color-link--hover);
+  text-decoration: underline;
+}
+
+button:focus,
+a:focus {
+  outline-style: dashed;
+  outline-color: var(--color-focus);
+  outline-width: 1px;
+}
+
+
+/* ==========================================================================
+Figures & Images
+========================================================================== */
+figure {
+  margin: 0;
+}
+
+figcaption {
+  text-align: center;
+}
+
+img {
+  display: block;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+
+/* ==========================================================================
+Nav Menu
+========================================================================== */
+h1 a:hover {
+  text-decoration: none;
+}
+
+nav {
+  align-items: flex-end;
+  background: var(--color-nav-bg);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+  padding: 3rem 2rem 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  visibility: visible;
+  width: 100%; }
+nav.is-hidden {
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), visibility 0.3s;
+  visibility: hidden; }
+
+.Nav-btn--open {
+  align-items: flex-end;
+  justify-content: space-between;
+  color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  height: 2rem;
+  padding: 0.5rem 0;
+  position: relative;
+  width: 2rem;
+}
+
+.Nav-btn--open span {
+  background: #1f1f1f;
+  height: 2px;
+  transition: width 0.2s;
+  width: 2rem; }
+.Nav-btn--open span:last-of-type {
+  width: 1.25rem; }
+.Nav-btn--open:hover span:last-of-type {
+  width: 2rem; }
+
+.Nav-btn--close {
+  height: 3rem;
+  padding: 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3rem;
+}
+
+nav a {
+  color: var(--color-link--nav);
+  font-size: 1.25rem;
+  margin: 0.5rem 0; }
+nav a:hover {
+  color: var(--color-link--nav--hover);
+  text-decoration: none;
+}
+
+nav a::after {
+  background: transparent;
+  bottom: 2px;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transition: background 0.2s; }
+nav a:hover::after {
+  background: var(--color-link--nav--hover); }
+
+
+/* ==========================================================================
+Tiles
+========================================================================== */
+.Tile-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Tile {
+  cursor: pointer;
+  flex: 1 0 auto;
+  margin: 1.25rem 1.25rem 0;
+  max-width: calc(100% - 2.5rem);
+  width: 18.75rem;
+}
+
+.Tile-image {
+  background: var(--color-header);
+  background-position: center;
+  background-size: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 2.125rem;
+  padding-top: 80%;
+  transition: border-radius 0.2s; }
+.Tile:hover .Tile-image {
+  border-radius: 1rem; }
+
+.Tile h3 {
+  transition: color 0.2s; }
+.Tile:hover h3 {
+  color: var(--color-link);
+  text-decoration: underline; }
+
+
+/* ==========================================================================
+Resume
+========================================================================== */
+.Resume h3 {
+  margin-top: var(--height-line);
+}
+
+
+/* ==========================================================================
+Articles
+========================================================================== */
+article {
+  background: var(--color-page-bg);
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  left: 0;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: var(--height-header); }
+article.is-hidden {
+  display: none; }
+
+article section {
+  padding: 3.25rem calc(50% - 34rem) 0;
+}
+
+article h2 {
+  margin-bottom: var(--height-line);
+}
+
+.Article-scrim {
+  background: var(--color-header);
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s, visibility 0s; }
+.Article-scrim.is-hidden {
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0s 0.3s;
+  visibility: hidden; }
+
+
+/* ==========================================================================
+Article Footer
+========================================================================== */
+footer {
+  align-self: flex-end;
+  background: var(--color-nav-bg);
+  display: grid;
+  flex: 1;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 5.875rem;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.Footer-btn--back {
+  display: flex;
+  flex-wrap: wrap;
+  height: 1.5rem;
+  margin: auto;  
+  width: 1.5rem;
+}
+
+.Footer-btn--back span {
+  background: var(--color-link--nav);
+  display: block;
+  height: 0.5rem;
+  margin: 0.125rem;
+  transition: color 0.2s, transform 0.2s;
+  width: 0.5rem; }
+.Footer-btn--back:hover span {
+  background: var(--color-text);
+  transform: scale(1.2); }
+
+.Footer-btn--prev,
+.Footer-btn--next {
+  color: var(--color-link--nav);
+  line-height: 1.5; }
+.Footer-btn--prev {
+  text-align: left; }
+.Footer-btn--next {
+  text-align: right; }
+
+.Footer-btn-text {
+  display: none;
+}
+
+.Footer-btn--prev b,
+.Footer-btn--next b {
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  transition: color 0.2s; }
+.Footer-btn--prev:hover b,
+.Footer-btn--next:hover b {
+  color: var(--color-text); }
+
+.Footer-btn--prev span,
+.Footer-btn--next span {
+  color: var(--color-link);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s; }
+.Footer-btn--prev:hover span,
+.Footer-btn--next:hover span {
+  color: var(--color-link--hover);
+  text-decoration: underline; }
+
+.Footer-btn--prev::before,
+.Footer-btn--next::before {
+  content: "\e317";
+  display: block;
+  float: left;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0 1.5rem 0;
+  transition: color 0.2s; }
+.Footer-btn--next::before {
+  float: right;
+  transform: scaleX(-1); }
+.Footer-btn--prev:hover::before,
+.Footer-btn--next:hover::before {
+  color: var(--color-text); }
+
+
+/* ==========================================================================
+Browser Upgrade Prompt
+========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+Media Queries
+========================================================================== */
+@media only screen and (min-width: 30em) {
+  header {
+    padding: 0 3rem;
+  }
+
+  .Nav-btn--open {
+    display: none;
+  }
+
+  nav {
+    background: none;
+    display: block;
+    height: initial;
+    padding: 0;
+    position: relative;
+    width: initial; }
+  nav.is-hidden {
+    transform: none;
+    visibility: visible; }
+
+  nav a {
+    color: var(--color-link); }
+  nav a:hover {
+    color: var(--color-link--hover); }
+  nav a:not(:last-of-type) {
+    margin-right: 1rem; }
+
+  nav a:hover::after {
+    background: var(--color-link--hover);
+  }
+
+  .Nav-btn--close {
+    display: none;
+  }
+
+  main {
+    width: calc(100% - 4rem);
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .Section--2col {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .Section--2col :nth-child(even) {
+    justify-self: end;
+  }
+  
+  footer {
+    padding: 0 3rem;
+  }
+
+  .Footer-btn-text {
+    display: block;
+  }
+}
