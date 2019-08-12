@@ -90,6 +90,12 @@ Utility Classes
 
 .u-center-align {
   text-align: center;
+  margin: auto;
+  margin-bottom: var(--height-line);
+}
+
+.u-bottom-margin {
+  margin-bottom: var(--height-line);
 }
 
 .u-padding-right {
@@ -190,7 +196,7 @@ section {
 
 }
 .tablepress td, .tablepress th {
-  padding: 8px;
+  padding:0.5rem;
   border: none;
   background: 0 0;
   text-align: left;
@@ -217,11 +223,11 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 0;
   padding: 0 0rem;
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.1rem;
+  margin: 0 0 var(--height-line);
 }
 
 h2 {
@@ -232,6 +238,7 @@ h2 {
   margin-bottom: 0.125rem;
   width: 100%; 
   text-align: center;
+  margin-bottom: var(--height-line);
 }
 
 h3 {
@@ -240,6 +247,8 @@ h3 {
   font-weight: 500;
   line-height: 1.375rem;
   padding: 0 2rem;
+  margin: 0 0 var(--height--line);
+  
 }
 
 h4 {
@@ -248,6 +257,7 @@ h4 {
   font-weight: 500;
   line-height: 1.375rem;
   padding: 0 2rem;
+  margin: 0 0 var(--height--line);
 }
 
 p {
@@ -309,8 +319,7 @@ small {
   align-items: center;
   color: var(--color-low-emphasis);
   display: flex;
-  margin: 0 0 var(--height-line);
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 
@@ -479,8 +488,9 @@ Tiles
 /* ==========================================================================
 Resume
 ========================================================================== */
-.Resume h3 {
+.Resume {
   margin-top: var(--height-line);
+  padding: 3.25rem calc(50% - 25rem) 0;
 }
 
 
@@ -501,7 +511,7 @@ article.is-hidden {
   display: none; }
 
 article section {
-  padding: 3.25rem calc(50% - 30rem) 0;
+  padding: 3.25rem calc(50% - 25rem) 0;
 }
 
 article h2 {
@@ -568,6 +578,7 @@ footer {
 
 .Footer-btn-text {
   display: none;
+  font-size: 0.875rem;
 }
 
 .Footer-btn--prev b,

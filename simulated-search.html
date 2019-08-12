@@ -78,25 +78,66 @@
         </table>
         <h5 class="tablepress-caption">* "Term" can be any text, and multiple forms of a Term can also be inserted. For example, if your Term was "meme", you could enter "meme, memes, dank memes", and the algorithm would know that those 3 comma-separated items would all count as getting that that Term.</h5>
 
+        
+        <p class="u-center-align"> I then perform a search for Term 2 and Term 3.</p>
+        <img class="u-center-align u-bottom-margin" src="img/simulatedSearch/demo SS search.svg" style="max-width: 600px; " alt="Image of a search engine with term 2 and term 3 typed in." />
 
+        <p class="u-center-align">The total weights for those two Terms would be calculated</p>
+        <table id="tablepress-2" class="tablepress tablepress-id-2">
+          <tbody class="row-hover">
+          <tr class="row-1">
+            <td class="column-1"></td><td class="column-2"><strong>Term 2</strong></td><td class="column-3"><strong>Term 3</strong></td><td class="column-4"><strong>Total</strong></td>
+          </tr>
+          <tr class="row-2">
+            <td class="column-1"><strong>Source 1</strong></td><td class="column-2" style="color: #666666;">0.30 </td><td class="column-3" style="color: #666666;">0.75</td><td class="column-4">1.05</td>
+          </tr>
+          <tr class="row-3">
+            <td class="column-1"><strong>Source 2</strong></td><td class="column-2" style="color: #666666;">1.00 </td><td class="column-3" style="color: #666666;">0.33</td><td class="column-4">1.33</td>
+          </tr>
+          <tr class="row-4">
+            <td class="column-1"><strong>Source 3</strong></td><td class="column-2" style="color: #666666;">0.50</td><td class="column-3" style="color: #666666;">1.00</td><td class="column-4">1.50</td>
+          </tr>
+          <tr class="row-5">
+            <td class="column-1"><strong>Source 4</strong></td><td class="column-2" style="color: #666666;">0.75 </td><td class="column-3" style="color: #666666;">0.85</td><td class="column-4">1.60</td>
+          </tr>
+          </tbody>
+          </table>
+          <p class="u-center-align">and the user would be displayed the source results in order based on highest-to-lowest total weight values.</p>
+          <img class="u-center-align u-bottom-margin" src="img/simulatedSearch/demo SS results.svg" style="max-width: 700px; " alt="Image of a search engine with term 2 and term 3 typed in." />
+
+          <p>While actual search engines like Google are much smarter and multifactorial, it would have been impossible to recreate or use these engines due to their proprietary nature and the constraints of the project (such as needing a walled-garden system that limited the number of sources and Terms so it would be easier to quantify and automate measurement). By implementing this weighting system, we could simulate the core functionality of search engines—matching search queries to sources based on weighted relevance.</p>
     </div>
+    <p>In addition to the weighting system, I designed error correction systems that included spell-checking and whitelisting, a suite of front-end parameters to allow for customization, data capture logic, and the overall UI/UX.</p>
+    <h3>Results</h3>
+    <p>The final deliverable, a new form of assessment focused on measuring the first steps of a good web search, was completed on-time and accepted by our client. I wrote an end-to-end design document that covered all aspects of this tool, including</p>
+    <ul>
+      <li>clear, human-readable descriptions of all underlying systems to be handed off to programming for implementation.</li>
+      <li>all aspects of data capture, based on my collaborations with the statisticians and psychometricians who would be using the data.</li>
+      <li>user flow and experience.</li>
+      <li>parameter requirements to ensure common customizations were easy and didn’t require programming.</li>
+      <li>interface styling.</li>
+      </ul>
+      <img class="u-center-align u-bottom-margin" src="img/simulatedSearch/ssIIC_cards.svg" style="max-width: 800px; " alt="Image of a search engine with term 2 and term 3 typed in." />
+      <p> The Simulated Search tool went through user testing, cog labs, a large scale pilot, and is now a part of the <a href="https://nces.ed.gov/nationsreportcard/">National Assessment of Educational Progress.</a> I wrote follow-up documentation covering all aspects of setting up the weighting system and changing various unique parameters, ensuring a clean hand-off.</p>
+    
+    </section>
 
-  
 
-
-      </section>
 
       <footer>
         <button class="Footer-btn--prev">
           <b class="Footer-btn-text">Previous project (P)</b>
           <span class="Footer-btn-text">Placeholder</span>
         </button>
+        <a class="u-center-align" href="index.html">
         <button class="Footer-btn--back" aria-label="Back">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
         </button>
+        <span class="Footer-btn-text u-center-align">Back to Folio</span>
+      </a>
         <button class="Footer-btn--next">
           <b class="Footer-btn-text">Next project (N)</b>
           <span class="Footer-btn-text">Placeholder</span>
