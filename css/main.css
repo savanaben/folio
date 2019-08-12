@@ -84,6 +84,14 @@ Utility Classes
   padding-left: 0.5rem;
 }
 
+.u-indent-left {
+  padding-left: 1.2rem;
+}
+
+.u-center-align {
+  text-align: center;
+}
+
 .u-padding-right {
   padding-right: 0.5rem;
 }
@@ -109,7 +117,7 @@ html {
   box-sizing: border-box;
   color: var(--color-text);
   font-family: sans-serif;
-  font-size: 1em;
+  font-size: 18px;
   line-height: var(--height-line); }
 html.is-no-overflow {
   overflow: hidden; }
@@ -148,7 +156,7 @@ main {
 }
 
 section {
-  padding-top: calc(3.25rem + var(--height-header));
+  padding-top: calc(2.0rem + var(--height-header));
 }
 
 .Section--2col {
@@ -161,12 +169,47 @@ section {
 }
 
 
+.tablepress {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1em;
+  border: none;
+}
+
+@media only screen and (min-width: 42em) {
+.tablepress, .tablepress-caption {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tablepress tr:hover { 
+  background-color: #EDEDED;
+}
+
+
+}
+.tablepress td, .tablepress th {
+  padding: 8px;
+  border: none;
+  background: 0 0;
+  text-align: left;
+  float: none!important;
+}
+.tablepress tbody td, .tablepress tfoot th {
+  border-top: 1px solid #ddd;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgb(221, 221, 221);
+}
+
+
 /* ==========================================================================
 Typography
 ========================================================================== */
 h1 {
   font-size: 1.75rem;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -175,34 +218,87 @@ h3,
 h4,
 h5 {
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 0rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.1rem;
 }
 
 h2 {
   color: var(--color-h2);
-  font-size: 1.75rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 600;
   line-height: 1.875rem;
   margin-bottom: 0.125rem;
-  width: 100%; }
+  width: 100%; 
+  text-align: center;
+}
 
 h3 {
   display: inline-block;
-  font-size: 1.375rem;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.375rem;
+  padding: 0 2rem;
+}
+
+h4 {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  padding: 0 2rem;
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin: 0 0 var(--height-line);
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
 ul {
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin: 0 0 var(--height-line);
   padding: 0 0 0 3.75rem;
+}
+
+
+#list-wrapper ol {
+  counter-reset: item;
+  list-style: none;
+}
+
+#list-wrapper ol li {
+  margin-bottom: 6px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-indent: -2rem;
+}
+ol {
+  margin: 0;
+  margin-top: -1rem;
+  padding: initial;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+#list-wrapper ol li:before {
+  content: counter(item);
+  counter-increment: item;
+  color: #505050;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  margin-right: 1rem;
+  width: 22px;
+  border: none;
+  background: #e5e5e5;
+  text-align: center;
+  text-indent: initial;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 24px;
 }
 
 li {
@@ -367,11 +463,11 @@ Tiles
   background-position: center;
   background-size: cover;
   border-radius: 0.5rem;
-  margin-bottom: 2.125rem;
+  margin-bottom: 1rem;
   padding-top: 80%;
   transition: border-radius 0.2s; }
 .Tile:hover .Tile-image {
-  border-radius: 1rem; }
+  border-radius: 2rem; }
 
 .Tile h3 {
   transition: color 0.2s; }
@@ -405,7 +501,7 @@ article.is-hidden {
   display: none; }
 
 article section {
-  padding: 3.25rem calc(50% - 34rem) 0;
+  padding: 3.25rem calc(50% - 30rem) 0;
 }
 
 article h2 {
@@ -529,7 +625,7 @@ Media Queries
 ========================================================================== */
 @media only screen and (min-width: 30em) {
   header {
-    padding: 0 3rem;
+    padding: 0 1rem;
   }
 
   .Nav-btn--open {

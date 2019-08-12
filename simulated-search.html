@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ben Gross' Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header>
+      <h1><a href="index.html">Ben Gross</a></h1>
+      <button class="Nav-btn--open" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="is-hidden">
+        <button class="Nav-btn--close Icon--close" aria-label="Close menu"></button>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+      </nav>
+    </header>
+
+
+
+    <article>
+      <section>
+        <h2>Simulating Searches</h2>
+        <p>This project’s goal was to figure out if someone can perform a good web search. Collaborating with content specialists, psychometricians, and assessment developers, I lead the design and UI/UX to create a simulated search engine.</p>
+        <h3>Focus</h3>
+        <p>After initial pitches and consideration between research, content, and design teams, the focus settled on two specific skills used when performing a web search:</p>
+        <div id="list-wrapper">
+        <ol>
+          <li>The initial search engine query.</li>
+          <li>Choosing the best site to explore from the standardized search engine results list (comprised of page titles, URLs, and summaries).</li>
+        </ol>
+      </div>
+      <p>We would create a simulated search engine to learn how good people are at these two skills. Our client, the <a href="https://nces.ed.gov/">National Center for Educational Statistics</a> (NCES), accepted this design and we moved forward!</p>
+      <h3>Design</h3>
+      <p>I lead the design by proposing a collection of systems to improve the simulative qualities of our search engine. These systems were also chosen based on an earlier market analysis, which found that comparable simulated search engines were particularly weak in fixing user input errors and providing dynamic search results (some engines would spit out the same canned results as long as the users query included one key term).</p>
+      <div class="u-indent-left">
+      <h4>Weight System</h4>
+      <p >The weighting system was designed to deliver relevant results based on the unique term(s) searched. Content specialists can assign a 0 to 1 weight value for each term and source, ensuring that search results are relevant to the terms searched.</p>
+      <p class="u-center-align"> For example, let’s say the weighting was set up as follows</p>
+      
+      <table id="tablepress-1" class="tablepress tablepress-id-1">
+        <tbody class="row-hover">
+        <tr class="row-1">
+          <td class="column-1"></td><td class="column-2"><strong>Term 1*</strong></td><td class="column-3"><strong>Term 2</strong></td><td class="column-4"><strong>Term 3</strong></td><td class="column-5"><strong>Term 4</strong></td><td class="column-6">…</td>
+        </tr>
+        <tr class="row-2">
+          <td class="column-1"><strong>Source 1</strong></td><td class="column-2">1</td><td class="column-3">0.3</td><td class="column-4">0.75</td><td class="column-5">0.9</td><td class="column-6">…</td>
+        </tr>
+        <tr class="row-3">
+          <td class="column-1"><strong>Source 2</strong></td><td class="column-2">0.5</td><td class="column-3">1</td><td class="column-4">0.33</td><td class="column-5">0.75</td><td class="column-6">…</td>
+        </tr>
+        <tr class="row-4">
+          <td class="column-1"><strong>Source 3</strong></td><td class="column-2">0.65</td><td class="column-3">0.5</td><td class="column-4">1</td><td class="column-5">0.33</td><td class="column-6">…</td>
+        </tr>
+        <tr class="row-5">
+          <td class="column-1"><strong>Source 4</strong></td><td class="column-2">0.3</td><td class="column-3">0.75</td><td class="column-4">0.85</td><td class="column-5">1</td><td class="column-6">…</td>
+        </tr>
+        <tr class="row-6">
+          <td class="column-1">…</td><td class="column-2">…</td><td class="column-3">…</td><td class="column-4">…</td><td class="column-5">…</td><td class="column-6">…</td>
+        </tr>
+        </tbody>
+        </table>
+        <h5 class="tablepress-caption">* "Term" can be any text, and multiple forms of a Term can also be inserted. For example, if your Term was "meme", you could enter "meme, memes, dank memes", and the algorithm would know that those 3 comma-separated items would all count as getting that that Term.</h5>
+
+
+    </div>
+
+  
+
+
+      </section>
+
+      <footer>
+        <button class="Footer-btn--prev">
+          <b class="Footer-btn-text">Previous project (P)</b>
+          <span class="Footer-btn-text">Placeholder</span>
+        </button>
+        <button class="Footer-btn--back" aria-label="Back">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button class="Footer-btn--next">
+          <b class="Footer-btn-text">Next project (N)</b>
+          <span class="Footer-btn-text">Placeholder</span>
+        </button>
+      </footer>
+    </article>
+    
+    <div class="Article-scrim is-hidden"></div>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
