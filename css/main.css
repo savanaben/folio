@@ -524,11 +524,15 @@ article h2 {
   position: fixed;
   right: 0;
   top: 0;
-  transition: opacity 0.3s, visibility 0s; }
+ /* transition: opacity 0.3s, visibility 1s;
+       idk how to fix the flicker - still a cool fade effect between pages?*/
+       
+      }
 .Article-scrim.is-hidden {
   opacity: 0;
-  transition: opacity 0.3s, visibility 0s 0.3s;
-  visibility: hidden; }
+      /*  transition: opacity 0.3s, visibility 0s 0.3s;     idk how to fix the flicker - still a cool fade effect between pages?*/
+  visibility: hidden;
+ }
 
 
 /* ==========================================================================
