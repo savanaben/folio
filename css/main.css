@@ -81,25 +81,24 @@ Fonts
 Utility Classes
 ========================================================================== */
 .u-padding-left {
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 
+.u-padding-bottom {
+  padding-bottom: 1rem;
+}
 .u-indent-left {
   padding-left: 1.2rem;
 }
 
 .u-center-align {
   text-align: center;
-  margin: auto;
-  margin-bottom: var(--height-line);
-}
-
-.u-bottom-margin {
-  margin-bottom: var(--height-line);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .u-padding-right {
-  padding-right: 0.5rem;
+  padding-right: 1rem;
 }
 
 .u-reflect-x {
@@ -113,6 +112,7 @@ Utility Classes
 .u-whitespace-pre {
   white-space: pre-wrap;
 }
+
 
 
 /* ==========================================================================
@@ -188,6 +188,7 @@ section {
     width: 600px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1.5rem;
 }
 .tablepress tr:hover { 
   background-color: #EDEDED;
@@ -196,7 +197,7 @@ section {
 
 }
 .tablepress td, .tablepress th {
-  padding:0.5rem;
+  padding: 8px;
   border: none;
   background: 0 0;
   text-align: left;
@@ -223,11 +224,11 @@ h2,
 h3,
 h4,
 h5 {
+  margin: 0;
   padding: 0 0rem;
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.1rem;
-  margin: 0 0 var(--height-line);
 }
 
 h2 {
@@ -238,7 +239,6 @@ h2 {
   margin-bottom: 0.125rem;
   width: 100%; 
   text-align: center;
-  margin-bottom: var(--height-line);
 }
 
 h3 {
@@ -246,9 +246,7 @@ h3 {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.375rem;
-  padding: 0 2rem;
-  margin: 0 0 var(--height--line);
-  
+  padding: 0 1rem;
 }
 
 h4 {
@@ -256,14 +254,13 @@ h4 {
   font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.375rem;
-  padding: 0 2rem;
-  margin: 0 0 var(--height--line);
+  padding: 0 1rem;
 }
 
 p {
   font-size: 1rem;
   margin: 0 0 var(--height-line);
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 ul {
@@ -319,7 +316,8 @@ small {
   align-items: center;
   color: var(--color-low-emphasis);
   display: flex;
-  padding: 0 2rem;
+  margin: 0 0 var(--height-line);
+  padding: 0 1rem;
 }
 
 
@@ -488,9 +486,8 @@ Tiles
 /* ==========================================================================
 Resume
 ========================================================================== */
-.Resume {
+.Resume h3 {
   margin-top: var(--height-line);
-  padding: 3.25rem calc(50% - 25rem) 0;
 }
 
 
@@ -511,11 +508,12 @@ article.is-hidden {
   display: none; }
 
 article section {
-  padding: 3.25rem calc(50% - 25rem) 0;
+  padding: 2rem calc(50% - 30rem) 0;
 }
 
 article h2 {
   margin-bottom: var(--height-line);
+  padding: 0 1rem;
 }
 
 .Article-scrim {
@@ -578,7 +576,6 @@ footer {
 
 .Footer-btn-text {
   display: none;
-  font-size: 0.875rem;
 }
 
 .Footer-btn--prev b,
@@ -618,6 +615,86 @@ footer {
 .Footer-btn--prev:hover::before,
 .Footer-btn--next:hover::before {
   color: var(--color-text); }
+
+
+/* ==========================================================================
+fuid grid from Henry Egloff <https://codepen.io/henryegloff/pen/eEjka> thxx
+========================================================================== */
+  * {
+    box-sizing: border-box;
+ }
+ 
+ .container {
+   width:90%;
+   max-width: 1300px;
+   margin: 2em auto;
+   background-color:#eee;
+   overflow:hidden;
+   padding:.5em;
+ }
+ 
+ img {
+   max-width:100%;
+ }
+ 
+ .item {
+   width:50%;
+   float:left;
+   padding:.5em;
+   border:none;
+   /*background-color:#fff;*/
+ }
+ 
+ .item p {
+   min-height:3em;
+   /*background-color:#fed;*/
+   margin:.5em 0 0 0;
+   font-size:.9em;
+   text-align:center;
+ }
+ 
+ @media screen and (max-width:1000px) {
+   
+ /*   body {
+     background-color:#ddf;
+   } */
+   
+   .item {
+     width:50%;
+   }
+ 
+ }
+ 
+ 
+ @media screen and (max-width:800px) {
+   
+ /*   body {
+     background-color:#cdd;
+   } */
+   
+   .item {
+     width:100%;
+   }
+   
+   .item p {
+   font-size:.8em;
+   }
+ 
+ }
+ 
+ @media screen and (max-width:400px) {
+   
+ /*   body {
+     background-color:#ded;
+   } */
+   
+   .item {
+     width:100%;
+   }
+ 
+ }
+ 
+
 
 
 /* ==========================================================================
