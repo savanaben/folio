@@ -242,7 +242,6 @@ h2 {
 }
 
 h3 {
-  display: inline-block;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.375rem;
@@ -358,13 +357,80 @@ figure {
   margin: 0;
 }
 
+.gallery-caption {
+  display: none;
+}
+
+.visible-caption {
+ color: #000;
+ transition: none;
+ text-decoration: none;
+ pointer-events: none;
+ 
+ }
+
+ .no-hover:hover {
+  color: none;
+  text-decoration: none;
+ filter: saturate(2);
+}
+
+
+
+a {
+  color: var(--color-link);
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s, text-decoration 0.2s; }
+a:hover {
+  color: var(--color-link--hover);
+  text-decoration: underline;
+}
+
+
+
+.my-gallery{
+  padding: 0 1rem 0 1rem;
+ }
+
+.my-gallery a{
+ float: left;
+ width:49%;
+}
+
+.first{
+ margin-right: 2%;
+}
+
+
+
+
+@media screen and (max-width:600px) {
+  
+  .my-gallery a{
+   float: left;
+   width:100%;
+ }
+
+}
+
+@media screen and (max-width:400px) {
+  
+
+}
+
+
+
 figcaption {
   text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+
 }
 
 img {
   display: block;
-  padding: 0 1rem;
   width: 100%;
 }
 
@@ -621,83 +687,10 @@ footer {
   color: var(--color-text); }
 
 
-/* ==========================================================================
-fuid grid from Henry Egloff <https://codepen.io/henryegloff/pen/eEjka> thxx
-========================================================================== */
-  * {
-    box-sizing: border-box;
- }
+
+
  
- .container {
-   width:90%;
-   max-width: 1300px;
-   margin: 2em auto;
-   background-color:#eee;
-   overflow:hidden;
-   padding:.5em;
- }
- 
- img {
-   max-width:100%;
- }
- 
- .item {
-   width:50%;
-   float:left;
-   padding:.5em;
-   border:none;
-   /*background-color:#fff;*/
- }
- 
- .item p {
-   min-height:3em;
-   /*background-color:#fed;*/
-   margin:.5em 0 0 0;
-   font-size:.9em;
-   text-align:center;
- }
- 
- @media screen and (max-width:1000px) {
-   
- /*   body {
-     background-color:#ddf;
-   } */
-   
-   .item {
-     width:50%;
-   }
- 
- }
- 
- 
- @media screen and (max-width:800px) {
-   
- /*   body {
-     background-color:#cdd;
-   } */
-   
-   .item {
-     width:100%;
-   }
-   
-   .item p {
-   font-size:.8em;
-   }
- 
- }
- 
- @media screen and (max-width:400px) {
-   
- /*   body {
-     background-color:#ded;
-   } */
-   
-   .item {
-     width:100%;
-   }
- 
- }
- 
+
 
 
 
