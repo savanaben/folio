@@ -211,6 +211,15 @@ section {
 }
 
 
+
+video::-webkit-media-controls-panel {
+ 
+  background-image: linear-gradient(hsla(101, 100%, 26%, 0.0)40%, hsla(166, 100%, 6%, 0.452)65%) !important; 
+ 
+
+}
+
+
 /* ==========================================================================
 Typography
 ========================================================================== */
@@ -242,6 +251,7 @@ h2 {
 }
 
 h3 {
+  color: var(--color-h2);
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.375rem;
@@ -249,7 +259,7 @@ h3 {
 }
 
 h4 {
-  display: inline-block;
+ 
   font-size: 1.15rem;
   font-weight: 500;
   line-height: 1.375rem;
@@ -366,13 +376,14 @@ figure {
  transition: none;
  text-decoration: none;
  pointer-events: none;
+ font-size:
  
  }
 
  .no-hover:hover {
   color: none;
   text-decoration: none;
- filter: saturate(2);
+ filter: saturate(1.2);
 }
 
 
@@ -391,12 +402,13 @@ a:hover {
 
 
 .my-gallery{
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem 0rem 1rem;
  }
 
 .my-gallery a{
  float: left;
  width:49%;
+ margin-bottom: 2%;
 }
 
 .first{
@@ -574,7 +586,7 @@ article.is-hidden {
   display: none; }
 
 article section {
-  padding: 2rem calc(50% - 30rem) 0;
+  padding: 2rem calc(50% - 25rem) 0;
 }
 
 article h2 {
