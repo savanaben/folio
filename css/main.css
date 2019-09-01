@@ -213,11 +213,78 @@ section {
 
 
 video::-webkit-media-controls-panel {
- 
-  background-image: linear-gradient(hsla(101, 100%, 26%, 0.0)40%, hsla(166, 100%, 6%, 0.452)65%) !important; 
- 
-
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0.7609637605042017) 6%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 100%)!important;
 }
+
+.videoWrapper {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ==========================================================================
@@ -376,8 +443,7 @@ figure {
  transition: none;
  text-decoration: none;
  pointer-events: none;
- font-size:
- 
+
  }
 
  .no-hover:hover {
@@ -405,11 +471,17 @@ a:hover {
   padding: 0 1rem 0rem 1rem;
  }
 
-.my-gallery a{
+.fify-fifty{
  float: left;
  width:49%;
  margin-bottom: 2%;
 }
+
+.one-column{
+  float: left;
+  width:100%;
+  margin-bottom: 2%;
+ }
 
 .first{
  margin-right: 2%;
@@ -564,8 +636,10 @@ Tiles
 /* ==========================================================================
 Resume
 ========================================================================== */
-.Resume h3 {
-  margin-top: var(--height-line);
+.Resume {
+background-color: white;
+padding-top: 2rem;
+border-radius: 0.5rem;
 }
 
 
@@ -760,7 +834,7 @@ Media Queries
   }
 }
 
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 88em) {
   .Section--2col {
     grid-template-columns: 1fr 1fr;
   }
