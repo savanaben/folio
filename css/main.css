@@ -87,14 +87,32 @@ Utility Classes
 .u-padding-bottom {
   padding-bottom: 1rem;
 }
+
+.u-half-padding-bottom{
+  margin: 0 0 0.66rem;
+}
 .u-indent-left {
   padding-left: 1.2rem;
+}
+
+.u-caption-right {
+  text-align: right;
+  margin-top: 0rem;
+  padding: 0rem;
+}
+
+.u-tight-column {
+  padding: 0 calc(50% - 16rem) 0;
 }
 
 .u-center-align {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.u-left-align {
+  text-align: left;
 }
 
 .u-padding-right {
@@ -301,7 +319,7 @@ h3,
 h4,
 h5 {
   margin: 0;
-  padding: 0 0rem;
+  padding: 0 1rem;
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 1.1rem;
@@ -311,7 +329,7 @@ h2 {
   color: var(--color-h2);
   font-size: 2rem;
   font-weight: 600;
-  line-height: 1.875rem;
+  line-height: 1.05;
   margin-bottom: 0.125rem;
   width: 100%; 
   text-align: center;
@@ -321,15 +339,16 @@ h3 {
   color: var(--color-h2);
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1.375rem;
+  line-height: 1.1;
   padding: 0 1rem;
+  margin-bottom: 0.2rem;
 }
 
 h4 {
  
   font-size: 1.15rem;
   font-weight: 500;
-  line-height: 1.375rem;
+  line-height: 1.2;
   padding: 0 1rem;
 }
 
@@ -442,8 +461,6 @@ figure {
  color: #000;
  transition: none;
  text-decoration: none;
- pointer-events: none;
-
  }
 
  .no-hover:hover {
@@ -451,6 +468,7 @@ figure {
   text-decoration: none;
  filter: saturate(1.2);
 }
+
 
 
 
@@ -624,14 +642,15 @@ Tiles
   padding-top: 80%;
   transition: border-radius 0.2s; }
 .Tile:hover .Tile-image {
-  border-radius: 2rem; }
+  border-radius: 1rem; }
 
-.Tile h3 {
-  transition: color 0.2s; }
-.Tile:hover h3 {
-  color: var(--color-link);
-  text-decoration: underline; }
 
+
+  .Tile:hover a .tile-image p .ahhh  {
+    pointer-events: none;
+    color: none;
+    text-decoration: none !important;
+  }
 
 /* ==========================================================================
 Resume
@@ -833,6 +852,9 @@ Media Queries
     width: calc(100% - 4rem);
   }
 }
+
+
+
 
 @media only screen and (min-width: 88em) {
   .Section--2col {
