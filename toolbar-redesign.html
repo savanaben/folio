@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ben Gross' Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header>
+      <h1><a href="index.html">Ben Gross</a></h1>
+      <button class="Nav-btn--open" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="is-hidden">
+        <button class="Nav-btn--close Icon--close" aria-label="Close menu"></button>
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#experience">Experience</a>
+      </nav>
+    </header>
+
+
+
+
+    <article>
+      <section>
+        <h2>Toolbar Redesign</h2>
+        <p>One of my main goals working for the <a href="https://nces.ed.gov/nationsreportcard/">National Assessment of Educational Progress (NAEP)</a> was to make things look better. Long did I stare at this toolbar, waiting for the day that I could update it.</p>
+
+        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a class="first no-hover" href="img/toolbar-redesign/old-eNAEP-toolbar.png" itemprop="contentUrl" data-size="1803x90">
+                <img src="img/toolbar-redesign/old-eNAEP-toolbar.png" itemprop="thumbnail" data-size="1803x90"  alt="Image description" />
+                <figcaption class="visible-caption" itemprop="caption description"></figcaption>
+            </a>
+            <figcaption class="gallery-caption" itemprop="caption description"></figcaption>
+          </figure>
+        </div>
+
+        <p>After much insisting that we badly needed a refresh, I finally got to re-design it! Keeping the mountain of client requirements in mind, I stripped away extraneous skeuomorphic detail, reenvisioned the hierarchy, and re-designed the icons, states, and color themes:</p>
+
+
+        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a class="first no-hover" href="img/toolbar-redesign/eNAEP-toolbar-before-after.png" itemprop="contentUrl" data-size="1155x245">
+                <img style="max-width: 800px;
+                margin: auto;" src="img/toolbar-redesign/eNAEP-toolbar-before-after.png" itemprop="thumbnail" data-size="1155x245"  alt="Image description" />
+                <figcaption class="visible-caption" itemprop="caption description"></figcaption>
+            </a>
+            <figcaption class="gallery-caption" itemprop="caption description"></figcaption>
+          </figure>
+        </div>
+
+
+        <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+          <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+              <a class="first no-hover" href="img/toolbar-redesign/enaep-toolbar-optimized.gif" itemprop="contentUrl" data-size="2560x199">
+                <img src="img/toolbar-redesign/enaep-toolbar-optimized.gif" itemprop="thumbnail" data-size="2560x199"  alt="Image description" />
+                <figcaption class="visible-caption" itemprop="caption description"></figcaption>
+            </a>
+            <figcaption class="gallery-caption" itemprop="caption description"></figcaption>
+          </figure>
+        </div>
+
+        <p>How much color to use was a really interesting study, as I needed to balance a number of considerations.</p>
+        <ul>
+            <li>The client expressed great interest in the assessment getting more colorful for engagement purposes (the classic “make it pop!” request -_-).</li>
+            <li>This toolbar can sit overtop of content with a wide range of <a href="test-design.html">color palettes.</a></li>
+            <li>Tools that were linked to many toolbar buttons had color themes already established, such as text-to-speech creating blue outlines around TTS content.</li>
+            <li>The NAEP project places extreme emphasis on maintaining trend, or the ability to compare assessment results across decades of data. How does an icon refresh and addition of color impact a students ability to identity and access tools, and could that in-turn affect their performance on the assessment?</li>
+            </ul>         
+
+
+            <h3>Deep Dive: The Spanish-English Toggle Button</h3>
+            <p>
+
+                http://www.languageicon.org/
+
+
+                Designing an icon to toggle between English and Spanish proved challenging, as we found no strong president beyond universal <a href="http://www.languageicon.org/">change-language icons.</a> While this iconography seemed to be standardizing at the time of design, we needed an icon that more specifically communicated English-to-Spanish, and vice-versa. I began one of my favorite design processes, rapid iteration, to conceptualize ideas.</p>
+            <p class="u-center-align">
+              insert pic of iterations
+            </p>
+            <p>
+                We quickly decided that an explicit text label would be required for this button. But, what about the icon? My solution was to integrate one of the core textual differences between spanish and english - the eñe (ñ). Combining this letter with an arrow to help denote “go to”, we landed on a three-part solution that packaged neatly into the square button slot. </p>
+            <p class="u-center-align">
+              insert looping gif of button toggling
+            </p>
+
+        <div class="u-tight-column">
+        <h3 class="u-center-align">Special Thanks</h3>
+        <p class="u-half-padding-bottom">
+       I want to thank Hilary Persky (Content Lead) and Lonnie Smith (Dev Lead) for being such great team members. You were a joy to work with, and I wish all my app teams were so small and nimble.
+        <h5 class="u-padding-bottom u-center-align"><i>All content owned by the <a href="https://nces.ed.gov/">National Center for Educational Statistics</a>&nbsp;and the United States Department of Education.</i></h5>
+      </p>
+    </div>
+       
+    
+
+
+
+
+
+        <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+  <!-- Background of PhotoSwipe. 
+       It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg"></div>
+
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides. 
+          PhotoSwipe keeps only 3 of them in the DOM to save memory.
+          Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+          <div class="pswp__top-bar">
+
+              <!--  Controls are self-explanatory. Order can be changed. -->
+
+              <div class="pswp__counter"></div>
+
+              <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+              <button class="pswp__button pswp__button--share" title="Share"></button>
+
+              <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+              <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+              <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+              <!-- element will get class pswp__preloader--active when preloader is running -->
+              <div class="pswp__preloader">
+                  <div class="pswp__preloader__icn">
+                    <div class="pswp__preloader__cut">
+                      <div class="pswp__preloader__donut"></div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+              <div class="pswp__share-tooltip"></div> 
+          </div>
+
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+          </button>
+
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+          </button>
+
+          <div class="pswp__caption">
+              <div class="pswp__caption__center"></div>
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+       
+
+      
+      
+      <footer>
+        <button class="Footer-btn--prev">
+          <b class="Footer-btn-text">Previous project (P)</b>
+          <span class="Footer-btn-text">Placeholder</span>
+        </button>
+        <button class="Footer-btn--back" aria-label="Back">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button class="Footer-btn--next">
+          <b class="Footer-btn-text">Next project (N)</b>
+          <span class="Footer-btn-text">Placeholder</span>
+        </button>
+      </footer>
+    </article>
+    
+    <div class="Article-scrim is-hidden"></div>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    
+
+    <!-- photoswipe -->
+    <!-- Core CSS file -->
+<link rel="stylesheet" href="js/vendor/dist/photoswipe.css"> 
+<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite, 
+     - preloader.gif (for browsers that do not support CSS animations) -->
+<link rel="stylesheet" href="js/vendor/dist/default-skin/default-skin.css"> 
+<!-- Core JS file -->
+<script src="js/vendor/dist/photoswipe.min.js"></script> 
+<!-- UI JS file -->
+<script src="js/vendor/dist/photoswipe-ui-default.min.js"></script> 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+// parse slide data (url, title, size ...) from DOM elements 
+// (children of gallerySelector)
+var parseThumbnailElements = function(el) {
+    var thumbElements = el.childNodes,
+        numNodes = thumbElements.length,
+        items = [],
+        figureEl,
+        linkEl,
+        size,
+        item;
+
+    for(var i = 0; i < numNodes; i++) {
+
+        figureEl = thumbElements[i]; // <figure> element
+
+        // include only element nodes 
+        if(figureEl.nodeType !== 1) {
+            continue;
+        }
+
+        linkEl = figureEl.children[0]; // <a> element
+
+        size = linkEl.getAttribute('data-size').split('x');
+
+        // create slide object
+        item = {
+            src: linkEl.getAttribute('href'),
+            w: parseInt(size[0], 10),
+            h: parseInt(size[1], 10)
+        };
+
+
+
+        if(figureEl.children.length > 1) {
+            // <figcaption> content
+            item.title = figureEl.children[1].innerHTML; 
+        }
+
+        if(linkEl.children.length > 0) {
+            // <img> thumbnail element, retrieving thumbnail url
+            item.msrc = linkEl.children[0].getAttribute('src');
+        } 
+
+        item.el = figureEl; // save link to element for getThumbBoundsFn
+        items.push(item);
+    }
+
+    return items;
+};
+
+// find nearest parent element
+var closest = function closest(el, fn) {
+    return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+};
+
+// triggers when user clicks on thumbnail
+var onThumbnailsClick = function(e) {
+    e = e || window.event;
+    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+    var eTarget = e.target || e.srcElement;
+
+    // find root element of slide
+    var clickedListItem = closest(eTarget, function(el) {
+        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+    });
+
+    if(!clickedListItem) {
+        return;
+    }
+
+    // find index of clicked item by looping through all child nodes
+    // alternatively, you may define index via data- attribute
+    var clickedGallery = clickedListItem.parentNode,
+        childNodes = clickedListItem.parentNode.childNodes,
+        numChildNodes = childNodes.length,
+        nodeIndex = 0,
+        index;
+
+    for (var i = 0; i < numChildNodes; i++) {
+        if(childNodes[i].nodeType !== 1) { 
+            continue; 
+        }
+
+        if(childNodes[i] === clickedListItem) {
+            index = nodeIndex;
+            break;
+        }
+        nodeIndex++;
+    }
+
+
+
+    if(index >= 0) {
+        // open PhotoSwipe if valid index found
+        openPhotoSwipe( index, clickedGallery );
+    }
+    return false;
+};
+
+// parse picture index and gallery index from URL (#&pid=1&gid=2)
+var photoswipeParseHash = function() {
+    var hash = window.location.hash.substring(1),
+    params = {};
+
+    if(hash.length < 5) {
+        return params;
+    }
+
+    var vars = hash.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        if(!vars[i]) {
+            continue;
+        }
+        var pair = vars[i].split('=');  
+        if(pair.length < 2) {
+            continue;
+        }           
+        params[pair[0]] = pair[1];
+    }
+
+    if(params.gid) {
+        params.gid = parseInt(params.gid, 10);
+    }
+
+    return params;
+};
+
+var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+    var pswpElement = document.querySelectorAll('.pswp')[0],
+        gallery,
+        options,
+        items;
+
+    items = parseThumbnailElements(galleryElement);
+
+    // define options (if needed)
+    options = {
+
+        // define gallery index (for URL)
+        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+        getThumbBoundsFn: function(index) {
+            // See Options -> getThumbBoundsFn section of documentation for more info
+            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                rect = thumbnail.getBoundingClientRect(); 
+
+            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+        }
+
+    };
+
+    // PhotoSwipe opened from URL
+    if(fromURL) {
+        if(options.galleryPIDs) {
+            // parse real index when custom PIDs are used 
+            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+            for(var j = 0; j < items.length; j++) {
+                if(items[j].pid == index) {
+                    options.index = j;
+                    break;
+                }
+            }
+        } else {
+            // in URL indexes start from 1
+            options.index = parseInt(index, 10) - 1;
+        }
+    } else {
+        options.index = parseInt(index, 10);
+    }
+
+    // exit if index not found
+    if( isNaN(options.index) ) {
+        return;
+    }
+
+    if(disableAnimation) {
+        options.showAnimationDuration = 0;
+    }
+
+    // Pass data to PhotoSwipe and initialize it
+    gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+};
+
+// loop through all gallery elements and bind events
+var galleryElements = document.querySelectorAll( gallerySelector );
+
+for(var i = 0, l = galleryElements.length; i < l; i++) {
+    galleryElements[i].setAttribute('data-pswp-uid', i+1);
+    galleryElements[i].onclick = onThumbnailsClick;
+}
+
+// Parse URL and open gallery if it contains #&pid=3&gid=1
+var hashData = photoswipeParseHash();
+if(hashData.pid && hashData.gid) {
+    openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+}
+};
+
+// execute above function
+initPhotoSwipeFromDOM('.my-gallery');
+</script>
+</body>
+</html>
