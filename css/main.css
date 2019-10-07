@@ -127,6 +127,9 @@ Utility Classes
   margin: 0;
 }
 
+.u-margin-bottom {
+  margin: 0rem 0rem 2rem 0;
+}
 .u-whitespace-pre {
   white-space: pre-wrap;
 }
@@ -415,7 +418,17 @@ small {
   padding: 0 1rem;
 }
 
-
+.retro-header {
+  color:#555555;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.retro-body {
+  color:#6e6e6e;
+  font-size: .85rem;
+  line-height: 1.25;
+}
 /* ==========================================================================
 Buttons & Links
 ========================================================================== */
@@ -659,7 +672,7 @@ dsZs
   }
 
 /* ==========================================================================
-Resume
+Resume and retrospective
 ========================================================================== */
 .Resume {
 background-color: white;
@@ -667,6 +680,12 @@ padding: 2rem 1% 2rem 1%;
 border-radius: 0.5rem;
 }
 
+.retro {
+  background-color: #e7e7e7;
+  padding: 1rem 1% 1rem 1%;
+  margin: 0 calc(50% - 19rem) 2rem calc(50% - 19rem);
+  border-radius: 0.5rem;
+  }
 
 /* ==========================================================================
 Articles
