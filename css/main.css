@@ -232,7 +232,6 @@ section {
 }
 
 
-
 video::-webkit-media-controls-panel {
   background: rgb(0,0,0);
   background: linear-gradient(0deg, rgba(0,0,0,0.7609637605042017) 6%, rgba(0,0,0,0) 22%, rgba(0,0,0,0) 100%)!important;
@@ -295,13 +294,12 @@ video::-webkit-media-controls-panel {
 
 
 
-
-
-
-
-
-
-
+.map-card {
+  background-color: white;
+  padding: 2rem 1% 2rem 1%;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  }
 
 
 
@@ -491,12 +489,16 @@ Figures & Images
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
-
   -webkit-animation: slowpan 75s linear 0s infinite alternate;
   position: fixed;
 }
  
+@media only screen and (max-width: 600px) {
+  #background-pan {
+    -webkit-animation: slowpan 35s linear 0s infinite alternate;
+  }
+}
+
 
 @-webkit-keyframes slowpan {
 
