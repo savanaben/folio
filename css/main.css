@@ -489,7 +489,7 @@ Figures & Images
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  -webkit-animation: slowpan 75s linear 0s infinite alternate;
+  -webkit-animation: slowpan 150s linear 0s infinite alternate;
   position: fixed;
 }
  
