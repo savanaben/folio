@@ -146,6 +146,32 @@
       <p>This map brought everything together, and critically incorporated topographic estimations. These estimations enabled Unity terrain modelers to get a sense of height across the Heartlands.</p> 
       <p>Finally, all of the character, structural, modular, terrain, texture, particle, and other assets were combined to create a 3D world! </p> 
 
+      <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a class="no-hover" href="img/maps/heartlands-in-game1.jpg" itemprop="contentUrl" data-size="2000x665">
+              <img src="img/maps/heartlands-in-game1.jpg" itemprop="thumbnail" data-size="2000x665"  alt="Image description" />
+              <figcaption class="visible-caption" itemprop="caption description"><h5 class="u-caption-right"></h5></figcaption>
+          </a>
+          <figcaption class="gallery-caption" itemprop="caption description"></figcaption>
+        </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+            <a class="no-hover" href="img/maps/heartlands-in-game2.jpg" itemprop="contentUrl" data-size="2000x889">
+              <img src="img/maps/heartlands-in-game2.jpg" itemprop="thumbnail" data-size="2000x889"  alt="Image description" />
+              <figcaption class="visible-caption" itemprop="caption description"></figcaption>
+          </a>
+          <figcaption class="gallery-caption" itemprop="caption description"></figcaption>
+        </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a class="no-hover" href="img/maps/heartlands-in-game3.jpg" itemprop="contentUrl" data-size="2000x861">
+            <img src="img/maps/heartlands-in-game3.jpg" itemprop="thumbnail" data-size="2000x861"  alt="Image description" />
+            <figcaption class="visible-caption" itemprop="caption description"><h5 class="u-caption-right"><a href="https://www.nasa.gov/pdf/692076main_Orbital_Debris_Management_and_Risk_Mitigation.pdf">Lots of people went into the creation of the Heartlands!</a></h5></figcaption>
+        </a>
+        <figcaption class="gallery-caption" itemprop="caption description">Lots of people went into the creation of the Heartlands!</figcaption>
+      </figure>
+      </div>
+
+
+
       <div class="u-tight-column u-margin-bottom retro">
         <h3 class="u-center-align retro-header">Retrospective</h3>
         <p class="u-half-padding-bottom retro-body">
@@ -495,6 +521,12 @@ if(hashData.pid && hashData.gid) {
 
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
+
+// custom code allows extermal "a" links in fig captions
+$('figcaption').on('click','a',function(e){
+  e.stopPropagation();
+});
+
 </script>
   </body>
 </html>

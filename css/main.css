@@ -356,6 +356,7 @@ h2 {
   text-align: center;
 }
 
+
 h3 {
   color: var(--color-h2);
   font-size: 1.4rem;
@@ -381,7 +382,7 @@ p {
 
 ul {
   font-size: 1rem;
-  margin: 0 0 var(--height-line);
+  margin: -1rem 0 var(--height-line);
   padding: 0 0 0 3.75rem;
 }
 
@@ -432,7 +433,7 @@ small {
   align-items: center;
   color: var(--color-low-emphasis);
   display: flex;
-  margin: 0 0 var(--height-line);
+  margin: 0 0 0.5rem;
   padding: 0 1rem;
 }
 
@@ -462,6 +463,7 @@ a {
   color: var(--color-link);
   font-weight: 500;
   position: relative;
+  z-index: 10;
   text-decoration: none;
   transition: color 0.2s, text-decoration 0.2s; }
 a:hover {
@@ -741,6 +743,8 @@ Resume and retrospective
 background-color: white;
 padding: 2rem 1% 2rem 1%;
 border-radius: 0.5rem;
+margin: 0 auto 1rem auto;
+    max-width: 50rem;
 }
 
 
