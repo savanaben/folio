@@ -383,7 +383,7 @@ p {
 ul {
   font-size: 1rem;
   margin: -1rem 0 var(--height-line);
-  padding: 0 0 0 3.75rem;
+  padding: 0 1rem 0 3.75rem;
 }
 
 
@@ -733,15 +733,23 @@ dsZs
   .Tile:hover a .tile-image p .ahhh  {
     pointer-events: none;
     color: none;
-    text-decoration: none !important;
+    text-decoration: none;
   }
+
+  .ahhh:hover {
+    text-decoration: none;
+}
+
+.ahh:hover {
+  text-decoration: underline !important;
+}
 
 /* ==========================================================================
 Resume and retrospective
 ========================================================================== */
 .resume {
 background-color: white;
-padding: 2rem 1% 2rem 1%;
+padding: 2rem 2% 2rem 2%;
 border-radius: 0.5rem;
 margin: 0 auto 1rem auto;
     max-width: 50rem;
@@ -828,7 +836,10 @@ footer {
   height: 0.5rem;
   margin: 0.125rem;
   transition: color 0.2s, transform 0.2s;
-  width: 0.5rem; }
+  width: 0.5rem; 
+  border-radius: 2px;
+}
+
 .Footer-btn--back:hover span {
   background: var(--color-text);
   transform: scale(1.2); }
@@ -949,7 +960,7 @@ Media Queries
 
 
 
-@media only screen and (min-width: 88em) {
+@media only screen and (min-width: 55em) {
   .Section--2col {
     grid-template-columns: 1fr 1fr;
   }
