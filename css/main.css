@@ -816,7 +816,7 @@ footer {
   display: grid;
   flex: 1;
   gap: 3rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   height: 5.875rem;
   justify-content: space-between;
   padding: 0;
@@ -959,6 +959,15 @@ Media Queries
 
 
 
+@media only screen and (min-width: 55em) {
+  .about-pic {
+    margin-top: 1rem;
+  }
+
+.about-pic {
+  margin-top: 7rem;
+}
+}
 
 @media only screen and (min-width: 55em) {
   .Section--2col {
