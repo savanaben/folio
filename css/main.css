@@ -447,7 +447,7 @@ small {
 }
 .retro-body {
   color:#6e6e6e;
-  font-size: .85rem;
+ 
   line-height: 1.25;
 }
 /* ==========================================================================
@@ -618,6 +618,26 @@ img {
 /* ==========================================================================
 Nav Menu
 ========================================================================== */
+
+
+
+
+
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -450px;
+  visibility: hidden;
+}
+
+
+.thing-with-anchor:before { content: ''; display: block; position: relative; width: 0; height: 3.5em; margin-top: -3.5em }
+
+
+
+
+
 h1 a:hover {
   text-decoration: none;
 }
@@ -761,7 +781,7 @@ margin: 0 auto 1rem auto;
 .retro {
   background-color: #e7e7e7;
   padding: 1rem 1% 1rem 1%;
-  margin: 0 calc(50% - 19rem) 2rem calc(50% - 19rem);
+  margin: 1rem 1rem 1rem 1rem;
   border-radius: 0.5rem;
   }
 
