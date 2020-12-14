@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Ben Gross' Portfolio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <header>
+      <h1><a href="index.html">Ben Gross</a></h1>
+      <button class="Nav-btn--open" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="is-hidden">
+        <button class="Nav-btn--close Icon--close" aria-label="Close menu"></button>
+        <a href="index.html#about">About</a>
+        <a href="index.html#work">Work</a>
+        <a href="index.html#experience">Experience</a>
+      </nav>
+    </header>
+
+
+
+
+    <article>
+      <section>
+        <h2>Pratt Usability Study</h2>
+        <p>This school project had us work with the Pratt Library to research certain interactions and user flows on their website. a 6-person remote moderated usability study was conducted to focus on two specific aspects of the site - the ask a librarian feature and the account login flow. Through study participant evidence and majority conclusions, a number of recommendations for improvement emerged. </p>
+
+      
+        <h3 class="u-left-align">Ask a Librarian Feature</h3>
+        <p>This feature includes the buttons and interfaces within the live chat feature. The study focused on a number of aspects, including chat button positioning, iconography recognition, window handling, and text box messaging. While some of these conclusions could be assumed based on emerging conventions for chat box functionality, the study aimed to quantify those assumptions so that the library can push for improvement with user evidence to back future proposals. </p>
+        <h4 class="u-center-align, u-padding-bottom" >Recommendation 1 - Move the Ask a Librarian button to the lower right corner of the window.</h4>
+
+  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a class="first no-hover fify-fifty" href="img/Pratt-study/ask-a-librarian buttonn.png" itemprop="contentUrl" data-size="1014x616">
+          <img src="img/Pratt-study/ask-a-librarian buttonn.png" itemprop="thumbnail" data-size="1014x616"  alt="Image description" />
+          <figcaption class="visible-caption" itemprop="caption description"></figcaption>
+      </a>
+      <figcaption class="gallery-caption" itemprop="caption description"></figcaption>
+    </figure>
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a class="no-hover fify-fifty" href="img/Pratt-study/as-a-librarian-button-edit.jpg" itemprop="contentUrl" data-size="1014x616">
+          <img src="img/Pratt-study/as-a-librarian-button-edit.jpg" itemprop="thumbnail" data-size="1014x616"  alt="Image description" />
+          <figcaption class="visible-caption" itemprop="caption description"></figcaption>
+      </a>
+      <figcaption class="gallery-caption" itemprop="caption description"></figcaption>
+    </figure>
+  </div>
+  <p>.........</p>
+  <div id="list-wrapper">
+  <ul>
+    <li>5 of 6 participants would prefer the chat box be in the lower right corner of the screen.</li>
+    <li>2 of 6 participants cited prior experiences with chat boxes located in the bottom right corner of the screen.</li>
+  </ul>
+
+
+
+
+  </section>
+
+ 
+  <footer>
+    <!-- to re-add buttons, change footer grid-template-columns: 1fr; to 1fr, 1fr, 1fr
+  
+      ------------------
+  
+    <button class="Footer-btn--prev">
+      <b class="Footer-btn-text">Previous project</b>
+      <span class="Footer-btn-text">Placeholder</span>
+    </button>
+    -->
+    <a style="margin: auto;" class="u-center-align" href="index.html">
+    <button class="Footer-btn--back" aria-label="Back">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <span class="Footer-btn-text u-center-align">Back to Folio</span>
+  </a>
+  <!-- 
+     <button class="Footer-btn--next">
+      <b class="Footer-btn-text">Next project</b>
+      <span class="Footer-btn-text">Placeholder</span>
+    </button> 
+  -->
+  </footer>
+    </article>
+    
+    <div class="Article-scrim is-hidden"></div>
+
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    
+
+    <!-- photoswipe -->
+    <!-- Core CSS file -->
+<link rel="stylesheet" href="js/vendor/dist/photoswipe.css"> 
+<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite, 
+     - preloader.gif (for browsers that do not support CSS animations) -->
+<link rel="stylesheet" href="js/vendor/dist/default-skin/default-skin.css"> 
+<!-- Core JS file -->
+<script src="js/vendor/dist/photoswipe.min.js"></script> 
+<!-- UI JS file -->
+<script src="js/vendor/dist/photoswipe-ui-default.min.js"></script> 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var initPhotoSwipeFromDOM = function(gallerySelector) {
+
+// parse slide data (url, title, size ...) from DOM elements 
+// (children of gallerySelector)
+var parseThumbnailElements = function(el) {
+    var thumbElements = el.childNodes,
+        numNodes = thumbElements.length,
+        items = [],
+        figureEl,
+        linkEl,
+        size,
+        item;
+
+    for(var i = 0; i < numNodes; i++) {
+
+        figureEl = thumbElements[i]; // <figure> element
+
+        // include only element nodes 
+        if(figureEl.nodeType !== 1) {
+            continue;
+        }
+
+        linkEl = figureEl.children[0]; // <a> element
+
+        size = linkEl.getAttribute('data-size').split('x');
+
+        // create slide object
+        item = {
+            src: linkEl.getAttribute('href'),
+            w: parseInt(size[0], 10),
+            h: parseInt(size[1], 10)
+        };
+
+
+
+        if(figureEl.children.length > 1) {
+            // <figcaption> content
+            item.title = figureEl.children[1].innerHTML; 
+        }
+
+        if(linkEl.children.length > 0) {
+            // <img> thumbnail element, retrieving thumbnail url
+            item.msrc = linkEl.children[0].getAttribute('src');
+        } 
+
+        item.el = figureEl; // save link to element for getThumbBoundsFn
+        items.push(item);
+    }
+
+    return items;
+};
+
+// find nearest parent element
+var closest = function closest(el, fn) {
+    return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+};
+
+// triggers when user clicks on thumbnail
+var onThumbnailsClick = function(e) {
+    e = e || window.event;
+    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+    var eTarget = e.target || e.srcElement;
+
+    // find root element of slide
+    var clickedListItem = closest(eTarget, function(el) {
+        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+    });
+
+    if(!clickedListItem) {
+        return;
+    }
+
+    // find index of clicked item by looping through all child nodes
+    // alternatively, you may define index via data- attribute
+    var clickedGallery = clickedListItem.parentNode,
+        childNodes = clickedListItem.parentNode.childNodes,
+        numChildNodes = childNodes.length,
+        nodeIndex = 0,
+        index;
+
+    for (var i = 0; i < numChildNodes; i++) {
+        if(childNodes[i].nodeType !== 1) { 
+            continue; 
+        }
+
+        if(childNodes[i] === clickedListItem) {
+            index = nodeIndex;
+            break;
+        }
+        nodeIndex++;
+    }
+
+
+
+    if(index >= 0) {
+        // open PhotoSwipe if valid index found
+        openPhotoSwipe( index, clickedGallery );
+    }
+    return false;
+};
+
+// parse picture index and gallery index from URL (#&pid=1&gid=2)
+var photoswipeParseHash = function() {
+    var hash = window.location.hash.substring(1),
+    params = {};
+
+    if(hash.length < 5) {
+        return params;
+    }
+
+    var vars = hash.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        if(!vars[i]) {
+            continue;
+        }
+        var pair = vars[i].split('=');  
+        if(pair.length < 2) {
+            continue;
+        }           
+        params[pair[0]] = pair[1];
+    }
+
+    if(params.gid) {
+        params.gid = parseInt(params.gid, 10);
+    }
+
+    return params;
+};
+
+var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+    var pswpElement = document.querySelectorAll('.pswp')[0],
+        gallery,
+        options,
+        items;
+
+    items = parseThumbnailElements(galleryElement);
+
+    // define options (if needed)
+    options = {
+
+        // define gallery index (for URL)
+        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+        getThumbBoundsFn: function(index) {
+            // See Options -> getThumbBoundsFn section of documentation for more info
+            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                rect = thumbnail.getBoundingClientRect(); 
+
+            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+        }
+
+    };
+
+    // PhotoSwipe opened from URL
+    if(fromURL) {
+        if(options.galleryPIDs) {
+            // parse real index when custom PIDs are used 
+            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+            for(var j = 0; j < items.length; j++) {
+                if(items[j].pid == index) {
+                    options.index = j;
+                    break;
+                }
+            }
+        } else {
+            // in URL indexes start from 1
+            options.index = parseInt(index, 10) - 1;
+        }
+    } else {
+        options.index = parseInt(index, 10);
+    }
+
+    // exit if index not found
+    if( isNaN(options.index) ) {
+        return;
+    }
+
+    if(disableAnimation) {
+        options.showAnimationDuration = 0;
+    }
+
+    // Pass data to PhotoSwipe and initialize it
+    gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+};
+
+// loop through all gallery elements and bind events
+var galleryElements = document.querySelectorAll( gallerySelector );
+
+for(var i = 0, l = galleryElements.length; i < l; i++) {
+    galleryElements[i].setAttribute('data-pswp-uid', i+1);
+    galleryElements[i].onclick = onThumbnailsClick;
+}
+
+// Parse URL and open gallery if it contains #&pid=3&gid=1
+var hashData = photoswipeParseHash();
+if(hashData.pid && hashData.gid) {
+    openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
+}
+};
+
+// execute above function
+initPhotoSwipeFromDOM('.my-gallery');
+</script>
+
+
+       <!-- Root element of PhotoSwipe. Must have class pswp. -->
+       <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe. 
+             It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+      
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+      
+            <!-- Container that holds slides. 
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+      
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+      
+                <div class="pswp__top-bar">
+      
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+      
+                    <div class="pswp__counter"></div>
+      
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+      
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+      
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+      
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+      
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+      
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+</body>
+</html>
