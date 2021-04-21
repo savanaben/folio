@@ -91,6 +91,11 @@ Utility Classes
 .u-half-padding-bottom{
   margin: 0 0 0.66rem;
 }
+
+.u-double-padding-bottom {
+  padding-bottom: 2rem;
+}
+
 .u-indent-left {
   padding-left: 1.2rem;
 }
@@ -132,6 +137,16 @@ Utility Classes
 }
 .u-whitespace-pre {
   white-space: pre-wrap;
+}
+
+.full-width {
+  width: 94vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  height: 85vh;
+  margin-left: -47vw;
+  margin-right: -47vw;
 }
 
 
