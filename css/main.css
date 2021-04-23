@@ -454,6 +454,13 @@ small {
   padding: 0 1rem;
 }
 
+.small-text {
+  color: var(--color-low-emphasis);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
 .retro-header {
   color:#555555;
   font-style: italic;
