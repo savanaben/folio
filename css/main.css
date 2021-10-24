@@ -149,7 +149,15 @@ Utility Classes
   margin-right: -47vw;
 }
 
-
+.full-width-NJaffordable {
+  width: 94vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  height: auto;
+  margin-left: -47vw;
+  margin-right: -47vw;
+}
 
 /* ==========================================================================
 Layout
