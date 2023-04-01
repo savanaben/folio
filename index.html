@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Ben Gross' Portfolio</title>
+    <title>Ben's folio</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -40,11 +43,43 @@
 
 
      <main>
-     <h2>Work</h2>
-      <section id="work" class="Tile-wrapper">
-        
+     <h2 id="work" style="padding-top: calc(2rem + var(--height-header));">Work</h2>
 
-        <figure class="Tile">
+  <!-- unfinished button array to filter projects. turn visibility back on to show -->
+    <div class="filters" style="display: none; padding-top: calc(0rem + var(--height-header));">
+      <label>
+        <input type="checkbox" data-filter="ux"> UX
+      </label>
+      <label>
+        <input type="checkbox" data-filter="ui"> UI
+      </label>
+      <label>
+        <input type="checkbox" data-filter="design"> Design
+      </label>
+      <label>
+        <input type="checkbox" data-filter="data-viz"> Data Viz
+      </label>     
+      <label>
+        <input type="checkbox" data-filter="case-study"> Case Study
+      </label>     
+      <label>
+        <input type="checkbox" data-filter="game-design"> Game Design
+      </label>     
+      <label>
+        <input type="checkbox" data-filter="assessment"> Assessment Design
+      </label>    
+      <label>
+        <input type="checkbox" data-filter="art"> Art
+      </label> 
+      <button id="clearAll">Uncheck All</button>   
+    </div>
+
+
+      <section class="Tile-wrapper">
+  
+        <div class="figures-container Tile-wrapper">
+
+        <figure class="Tile mix data-viz dev">
           <a href="SFdataViz.html">
         <div class="Tile-image" style="background-image: url(img/SFdataViz-cover.jpg);" aria-label="image of floating circular nodes in space with various book labels."></div>
         <figcaption>
@@ -56,7 +91,7 @@
 
 
 
-        <figure class="Tile">
+        <figure class="Tile mix design ui">
           <a href="testlet-design-system.html">
         <div class="Tile-image" style="background-image: url(img/design-system-cover.svg);" aria-label="abstract image of three shapes coming together to create a page template."></div>
         <figcaption>
@@ -67,7 +102,7 @@
       </figure>
 
 
-        <figure class="Tile">
+        <figure class="Tile mix data-viz dev">
           <a href="museum-mania.html">
         <div class="Tile-image" style="background-image: url(img/museum-mania-cover.svg);" aria-label="Image of a logo that looks like an abstract museum with the letter M built in it."></div>
         <figcaption>
@@ -77,7 +112,7 @@
       </a>
       </figure>
 
-      <figure class="Tile">
+      <figure class="Tile mix data-viz ux">
         <a href="NJ-affordable-housing.html">
       <div class="Tile-image" style="background-image: url(img/NJ-cover.jpg);" aria-label="Image of a logo that looks like an abstract museum with the letter M built in it."></div>
       <figcaption>
@@ -88,7 +123,7 @@
     </figure>
 
     
-        <figure class="Tile">
+        <figure class="Tile mix ui case-study">
             <a href="math-mania.html">
           <div class="Tile-image" style="background-image: url(img/IIC-card-cover.png);" aria-label="Image of a coordinate plane with points and lines."></div>
           <figcaption>
@@ -99,7 +134,7 @@
         </figure>
 
        
-        <figure class="Tile">
+        <figure class="Tile mix case-study ux assessment">
             <a href="simulated-search.html">
           <div class="Tile-image" style="background-image: url(img/search.svg);" aria-label="Image of a search engine user interface."></div>
           <figcaption>
@@ -111,7 +146,7 @@
 
         
             
-        <figure class="Tile">
+        <figure class="Tile mix ui assessment">
           <a href="test-design.html">
           <div class="Tile-image" style="background-image: url(img/mango.jpg);" aria-label="Image of a user interface for a reading assessment."></div>
           <figcaption>
@@ -122,7 +157,7 @@
         </figure>
      
 
-        <figure class="Tile">
+        <figure class="Tile mix ui">
             <a href="toolbar-redesign.html">
           <div class="Tile-image" style="background-image: url(img/toolbar.jpg);" aria-label="Image of two toolbars for a user interface."></div>
           <figcaption>
@@ -132,7 +167,7 @@
         </a>
         </figure>
 
-        <figure class="Tile">
+        <figure class="Tile mix game-design">
           <a href="maps.html">
         <div class="Tile-image" style="background-image: url(img/heartlands.jpg);" aria-label="Image of a colorful map with labels of towns."></div>
         <figcaption>
@@ -142,7 +177,7 @@
       </a>
       </figure>
 
-      <figure class="Tile">
+      <figure class="Tile mix art">
         <a href="3D.html">
       <div class="Tile-image" style="background-image: url(img/3D-cover.jpg);" aria-label="Fantastical image of melting mushroom and orange candy-cane trees."></div>
       <figcaption>
@@ -152,7 +187,7 @@
     </a>
     </figure>
     
-    <figure class="Tile">
+    <figure class="Tile mix case-study ui">
       <a href="pratt-usability-study.html">
     <div class="Tile-image" style="background-image: url(img/pratt-usability-study-cover.jpg);" aria-label="Fantastical image of melting mushroom and orange candy-cane trees."></div>
     <figcaption>
@@ -162,7 +197,7 @@
   </a>
   </figure>
 
-  <figure class="Tile">
+  <figure class="Tile mix case-study ui">
     <a href="growNYC.html">
   <div class="Tile-image" style="background-image: url(img/growNYC-cover.jpg);" aria-label="abstract image of three shapes coming together to create a page template."></div>
   <figcaption>
@@ -171,10 +206,14 @@
   </figcaption>
 </a>
 </figure>
+</div>
 
-  
-  
+
+
+
+</div>
   </section>
+
       <section  class="resume">
         <h2 class=" thing-with-anchor u-padding-bottom" id="experience">
           Experience</h2>
@@ -184,11 +223,11 @@
           <h3>UI/UX Strategist</h3>
           <p class="u-no-margin">Educational Testing Service</p>
           <small>2021–present</small>
-          <p>I lead the instructional design team for the National Assessment of Educational Progress and directly create designs, prototypes, and digital content across a range of assessment and learning projects. 
+          <p>I lead the instructional design team for the National Assessment of Educational Progress (NAEP) and directly create components, prototypes, and digital content across a range of assessment and learning projects. 
           </p>
           <ul>
-            <li>Consistently interface with the NAEP client, presenting complex interactions and projects in understandable terms supported by visuals.</li>
-            <li>Coordinate design work across content and development teams to supporting product cohesion and gain early level-of-effort assessment from downstream developers. </li>
+            <li>Consistently collaborate with the NAEP client, presenting complex interactions and projects in understandable terms supported by visuals and prototypes.</li>
+            <li>Coordinate design work across content and development teams to ensure schedules are met, design system expansions are carefully weighed, and products are successfully moved through design, study, and integration processes. </li>
             <li>Provide leadership through example in the establishment of design processes, prioritization of research and study to validate assumptions, and promotion of a culture of shared critique, agency, and constant knowledge-sharing. </li>
             </ul>
 
@@ -204,7 +243,7 @@
           <li>Led the user experience design across complex scenario-based student assessments. Included responsibilities like design system ownership, content reviews, design mentorship, project assignment/management, and keeping our team nimble and happy. </li>
           <li>Persona/empathy development and iterative usability testing to ensure products meet the goals and wants of the people using them. </li>
           <li>Scrum/Agile/Design Thinking methodologies utilized to cut through big company bloat, create team diversity, and clearly scope goals. </li>
-          <li>Ensured all front-end functionality and style specifications were clear for developers - provided front-end development support QC’ing implementation and prioritizing features. </li>
+          <li>Ensured all front-end functionality and style specifications were clear for developers - provided front-end development support QC’ing implementation and prioritizing features.</li>
           </ul>
 
 
@@ -284,7 +323,7 @@
           <small class="u-no-margin"><i class="Icon--mail u-padding-right"></i><a href="mailto:ben.c.gross@gmail.com">ben.c.gross@gmail.com</a></small>
           <small><i class="Icon--phone u-padding-left u-reflect-x"></i>908-892-2514</small>
           <p>Hiya, nice to meet. I’m a UXer and Digital Designer in the Princeton, NJ area. I got my start in architecture and am fascinated by all of the unique spaces around us. If you’re ever in the area, I’ll give you an exclusive tour of the coolest nooks, sunken gardens, wavy hallways, and meandering paths I’ve found. </p>
-          <p>Professionally I’ve shifted from 3D modeling and game design to UX. It's felt natural to care for a person's experience in the digital world as an architect does in the physical. My strengths lie in end-to-end design considerations — from rapid, iterative ideation early-on to the creation of final assets like animations, illustrations, and interfaces for use in final products. 
+          <p>Professionally I’ve shifted from 3D modeling and game design to UX. It's felt natural to care for a person's experience in the digital world as an architect does in the physical. My strengths span the end-to-end creation of a product — early-on iterative ideation, advanced prototyping and study design, specs and design system integrations for development, and the creation of final assets like animations and illustrations. 
           </p>
           <p>I'm also currently pursing a masters in Information Experience Design at Pratt Institute, with the goal of expanding my programming, data visualization, and user research skillsets.  
           </p>
@@ -300,7 +339,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/filter.js"></script>
 
 
   </body>

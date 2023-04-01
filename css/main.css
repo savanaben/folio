@@ -206,7 +206,7 @@ main {
 }
 
 section {
-  padding-top: calc(2.0rem + var(--height-header));
+  padding-top: 1rem;
 }
 
 .Section--2col {
@@ -353,7 +353,7 @@ h1 {
 .quote {
   color: #808080;
   font-style: italic;
-  font-weight: thin;
+  font-weight:300;
   font-size: 1.4rem;
   margin: 0 2rem 2rem 2rem;
 }
@@ -765,6 +765,10 @@ dsZs
   margin: 1rem 1rem 0;
   max-width: calc(100% - 2.5rem);
   width: 12.75rem;
+}
+
+.Tile-wrapper .mix {
+  max-width: 400px; /* Set the maximum width for the figures */
 }
 
 
