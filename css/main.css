@@ -169,8 +169,13 @@ html {
   font-family: sans-serif;
   font-size: 18px;
   line-height: var(--height-line); }
-html.is-no-overflow {
+
+
+/*
+  html.is-no-overflow {
   overflow: hidden; }
+*/
+
 
 html,
 body {
